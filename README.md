@@ -34,9 +34,9 @@ cifar10/
 
 ## Requisitos
 
-- Python 3.8+
-- TensorFlow 2.x
-- NumPy
+- Python 3.12
+- TensorFlow 
+- NumPy 
 - Matplotlib
 - Seaborn
 - Scikit-learn
