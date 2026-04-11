@@ -6,7 +6,7 @@ Cuaderno de clasificacion de imagenes usando el dataset CIFAR-10 y redes neurona
 
 El proyecto entrena una CNN para clasificar imagenes de 32x32 pixeles en 10 categorias diferentes usando el dataset CIFAR-10.
 
-- Streamlit: [Ver aplicacion]()
+- Streamlit: [Ver aplicacion](https://modelo-de-prediccion-de-imagenes-de-cifar10-7gnqumuynzkj84lvdw.streamlit.app/)
 
 ## Clases
 
