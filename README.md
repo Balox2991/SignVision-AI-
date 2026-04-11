@@ -93,3 +93,4 @@ Red neuronal convolucional secuencial con tres bloques de convolucion y dos capa
 - Early stopping con patience 5
 - Model checkpoint guardando el mejor modelo
 # Modelo-de-Prediccion-de-Imagenes-de-Cifar10
+# Modelo-de-Prediccion-de-Imagenes-de-Cifar10
