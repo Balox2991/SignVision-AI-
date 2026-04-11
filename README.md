@@ -92,5 +92,3 @@ Red neuronal convolucional secuencial con tres bloques de convolucion y dos capa
 - Dropout 0.5 en capas densas
 - Early stopping con patience 5
 - Model checkpoint guardando el mejor modelo
-# Modelo-de-Prediccion-de-Imagenes-de-Cifar10
-# Modelo-de-Prediccion-de-Imagenes-de-Cifar10
