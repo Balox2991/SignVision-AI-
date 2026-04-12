@@ -81,8 +81,8 @@ Red neuronal convolucional secuencial con tres bloques de convolucion y dos capa
 
 | Metrica | Valor |
 |---------|-------|
-| Test accuracy | 76% |
-| Epochs entrenados | ~42 |
+| Test accuracy | 77% |
+| Epochs entrenados | ~39 |
 
 ## Tecnicas aplicadas
 
