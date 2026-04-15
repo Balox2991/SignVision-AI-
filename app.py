@@ -95,7 +95,7 @@ def predecir_imagen(img_pil):
     img = img_pil.convert("RGB").resize((32, 32))
     img_array = np.array(img).astype("float32") / 255.0
     img_array = np.expand_dims(img_array, axis=0)
-    model = tf.keras.models.load_model("modelo_cifar10_resnet.keras")
+    model = tf.keras.models.load_model("modelo_cifar10.keras")
     return model.predict(img_array)[0]
 
 def mostrar_resultados(predictions):
