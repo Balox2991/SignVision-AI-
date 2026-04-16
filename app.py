@@ -4,6 +4,7 @@ import numpy as np
 from PIL import Image
 import tensorflow as tf
 from streamlit_drawable_canvas import st_canvas
+from tensorflow.keras.applications.resnet50 import preprocess_input
 
 # -------------------------------------------------------
 # Configuracion de la pagina
@@ -90,12 +91,18 @@ st.markdown("---")
 # -------------------------------------------------------
 # Funcion de prediccion compartida
 # -------------------------------------------------------
+@st.cache_resource
+def cargar_modelo():
+    return tf.keras.models.load_model(
+        "modelo_cifar10_resnet.keras",
+        custom_objects={"preprocess_input": preprocess_input}
+    )
+
 def predecir_imagen(img_pil):
-    """Recibe un objeto PIL.Image, lo preprocesa y devuelve las predicciones."""
-    img = img_pil.convert("RGB").resize((32, 32))
-    img_array = np.array(img).astype("float32") / 255.0
+    model = cargar_modelo()
+    img = img_pil.convert("RGB").resize((32, 32))  # ← 32x32 como fue entrenado
+    img_array = np.array(img).astype("float32")    # ← sin /255.0
     img_array = np.expand_dims(img_array, axis=0)
-    model = tf.keras.models.load_model("modelo_cifar10_resnet.keras")
     return model.predict(img_array)[0]
 
 def mostrar_resultados(predictions):
